@@ -2,7 +2,7 @@ import { PlateSegmentData, NcProgramResult } from '../types';
 
 /**
  * Generates industry-standard ISO 6983 G-code for heavy CNC plate cutting
- * and marking machines (Messer, ESAB, Koike, Farley, Bystronic).
+ * and marking machines (major CNC controller families).
  * Handles Plasma/Oxy-fuel Cutting (Tool 1), Plasma/Inkjet Marking (Tool 2),
  * and Triple-Torch / Bevel Unit Tilting (M07/M08).
  */
@@ -42,7 +42,7 @@ export function generatePlateGCode(plate: PlateSegmentData): NcProgramResult {
   lines.push(`F3500 (Marking Feedrate: 3,500 mm/min)`);
   lines.push(`G00 X500.0 Y300.0 (Rapid to Text Block Start)`);
   lines.push(`M03 S1 (Marking Head ON)`);
-  lines.push(`(TEXT: "WC | ${plate.equipmentTag}")`);
+  lines.push(`(TEXT: "W Company | ${plate.equipmentTag}")`);
   lines.push(`(TEXT: "PART: ${partNo} | THK: ${T}mm | HEAT: ${plate.heatNumber}")`);
   lines.push(`(TEXT: "ROLLING DIR: ${plate.rollingDirection} -> R=${plate.targetRadiusMm}mm [${plate.surfaceMarkingSide}]")`);
   lines.push(`(TEXT: "MATING TOP: ${plate.matingTopPart}")`);

@@ -170,7 +170,7 @@ export const NcCuttingMarkingStudio: React.FC<NcCuttingMarkingStudioProps> = ({
                 NC 철판 절단기 마킹 데이터 전송 &amp; 현장 스마트 QR 검증 스튜디오
               </h2>
               <span className="text-[10px] px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 font-mono font-bold">
-                WC DNC CONNECT
+                W Company DNC CONNECT
               </span>
             </div>
             <p className="text-xs text-slate-400">
@@ -557,7 +557,7 @@ export const NcCuttingMarkingStudio: React.FC<NcCuttingMarkingStudioProps> = ({
               </span>
             </div>
             <div className="font-mono text-cyan-400 font-semibold">
-              POSCO {currentPlate.material} | HEAT: {currentPlate.heatNumber}
+              DEMO STEEL {currentPlate.material} | HEAT: {currentPlate.heatNumber}
             </div>
           </div>
         </div>
@@ -659,7 +659,7 @@ export const NcCuttingMarkingStudio: React.FC<NcCuttingMarkingStudioProps> = ({
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="text-xs font-bold text-white">
-                      공장 DNC 네트워크 연결: 1호기 대형 갠트리 절단기 (MESSER OMNICUT 6000)
+                      공장 DNC 네트워크 연결: 1호기 대형 갠트리 절단기 (DEMO GANTRY CUTTER)
                     </span>
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
@@ -952,7 +952,7 @@ export const NcCuttingMarkingStudio: React.FC<NcCuttingMarkingStudioProps> = ({
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-white flex items-center gap-1.5">
                     <Compass className="w-4 h-4 text-cyan-400" />
-                    <span>전체 101.1m 워시 타워 내 부재 조립 위치</span>
+                    <span>전체 96.0m 워시 타워 내 부재 조립 위치</span>
                   </span>
                   <span className="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-blue-300 font-mono">
                     ELEVATION: EL +{currentPlate.qrCodeData.targetElevationM}m
@@ -960,7 +960,7 @@ export const NcCuttingMarkingStudio: React.FC<NcCuttingMarkingStudioProps> = ({
                 </div>
 
                 <div className="text-xs text-slate-300 leading-relaxed">
-                  본 부재 <strong>{currentPlate.partNumber}</strong>는 101.1m 워시 타워의{' '}
+                  본 부재 <strong>{currentPlate.partNumber}</strong>는 96.0m 워시 타워의{' '}
                   <span className="text-cyan-300 font-semibold font-mono">CAN #{currentPlate.canNumber}</span>에 해당하는{' '}
                   3분할 원주 중 <strong>{currentPlate.segmentIndex}번째 플레이트 (방위각 {currentPlate.azimuthCoverage})</strong>입니다.
                 </div>
@@ -1051,15 +1051,15 @@ export const NcCuttingMarkingStudio: React.FC<NcCuttingMarkingStudioProps> = ({
                 </div>
               </div>
 
-              {/* POSCO Mill Test Certificate (MTR) Link */}
+              {/* DEMO STEEL Mill Test Certificate (MTR) Link */}
               <div className="bg-slate-950 border border-slate-800 p-3 rounded-xl flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] text-slate-400">포스코 공인 강판 밀시트 (MTR 연동)</div>
+                  <div className="text-[10px] text-slate-400">가상 제철사 공인 강판 밀시트 (MTR 연동)</div>
                   <div className="font-mono text-cyan-300 font-bold">{currentPlate.heatNumber}</div>
                   <div className="text-[10px] text-slate-500">인장강도: 515 MPa • 충격시험: -46℃ 68J (ASME U2)</div>
                 </div>
                 <button
-                  onClick={() => alert(`[POSCO MTR CERTIFICATE]\n강종: SA516-70N\nHeat No: ${currentPlate.heatNumber}\n항복강도: 380 MPa\n인장강도: 545 MPa\n연신율: 28%\n100% 초음파 UT 탐상 합격 (ASTM A578 Level 1)`)}
+                  onClick={() => alert(`[DEMO STEEL MTR CERTIFICATE]\n강종: SA516-70N\nHeat No: ${currentPlate.heatNumber}\n항복강도: 380 MPa\n인장강도: 545 MPa\n연신율: 28%\n100% 초음파 UT 탐상 합격 (ASTM A578 Level 1)`)}
                   className="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs cursor-pointer"
                 >
                   <ExternalLink className="w-3 h-3" />

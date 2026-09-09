@@ -2,7 +2,7 @@ import { PlateSegmentData, NcProgramResult } from '../types';
 
 /**
  * Generates ISO/EIA 6983 G-Code for CNC Heavy Plate Gantry Cutting & Marking Machines
- * (Compatible with Messer, ESAB Vision, Koike, Daito, Tanaka controllers)
+ * (Compatible with major ISO/EIA 6983 controller families)
  */
 export function generateIsoGCode(plate: PlateSegmentData): NcProgramResult {
   const lines: string[] = [];
@@ -22,13 +22,13 @@ export function generateIsoGCode(plate: PlateSegmentData): NcProgramResult {
 
   // 1. Program Header
   lines.push(`%`);
-  lines.push(`O${pNo.slice(-4) || '1001'} (WC HEAVY PLANT CNC CUTTING & SMART MARKING PROGRAM)`);
+  lines.push(`O${pNo.slice(-4) || '1001'} (W Company HEAVY PLANT CNC CUTTING & SMART MARKING PROGRAM)`);
   lines.push(`(PART NO: ${plate.partNumber})`);
   lines.push(`(EQUIPMENT: ${plate.equipmentTag})`);
   lines.push(`(MATERIAL: ${plate.material} / HEAT NO: ${plate.heatNumber})`);
   lines.push(`(PLATE BLANK SIZE: ${L.toFixed(1)} x ${W.toFixed(1)} x ${T.toFixed(1)} mm / ${plate.weightTon} TON)`);
   lines.push(`(GENERATED AT: ${new Date().toISOString()})`);
-  lines.push(`(CONTROLLER TARGET: ISO/EIA 6983 GANTRY CUTTER - MESSER / ESAB / KOIKE)`);
+  lines.push(`(CONTROLLER TARGET: ISO/EIA 6983 GANTRY CUTTER - GENERIC ISO/EIA CONTROLLER)`);
   lines.push(``);
 
   // 2. Machine Safe Initialization
@@ -380,7 +380,7 @@ HEADER
 9
 $ACADVER
 1
-AC1015
+ADEMO-V0015
 0
 ENDSEC
 0

@@ -39,16 +39,16 @@ export interface FlangeParams {
   raisedFaceHeight: number;    // e.g. 2 mm
 }
 
-// WC Heavy Plant Equipment (Wash Tower / Column / Reactor / Pressure Vessel) Parameters
+// W Company Heavy Plant Equipment (Wash Tower / Column / Reactor / Pressure Vessel) Parameters
 export interface VesselPlantParams {
   equipmentType: 'wash_tower' | 'distillation_column' | 'loop_reactor' | 'pressure_vessel' | 'heat_exchanger';
-  equipmentTag: string;          // e.g. 'C-101' or 'WASH TOWER'
-  projectName: string;           // e.g. 'UNITED EO/EG III PROJECT'
-  client: string;                // e.g. 'SAMSUNG ENGINEERING / SABIC'
-  fabricator: string;            // 'WC'
+  equipmentTag: string;          // e.g. 'DEMO-V-001' or 'WASH TOWER'
+  projectName: string;           // e.g. 'DEMO CHEMICAL PLANT PROJECT'
+  client: string;                // e.g. 'DEMO EPC / DEMO CLIENT'
+  fabricator: string;            // 'W Company'
   
   // Primary Dimensions
-  totalLengthM: number;          // e.g. 101.1 m (길이/전고)
+  totalLengthM: number;          // e.g. 96.0 m (길이/전고)
   outerDiameterM: number;        // e.g. 10.8 m (직경)
   totalHeightM: number;          // e.g. 11.4 m (노즐/스커트 포함 최대 외측 폭)
   totalWeightTon: number;        // e.g. 1,926 Ton (총 자중)
@@ -168,7 +168,7 @@ export interface BlueprintModel {
   category: string;
   description: string;
   params: FlangeParams;
-  vesselParams?: VesselPlantParams;  // Wooyang HC Mega Plant Vessel Parameters
+  vesselParams?: VesselPlantParams;  // W Company Mega Plant Vessel Parameters
   material: CADMaterialType;
   surfaceFinish: string;
   standard: string;
@@ -228,16 +228,16 @@ export interface PlateAttachmentMarking {
 
 export interface PlateSegmentData {
   id: string;
-  partNumber: string;                 // e.g. "C101-CAN14-PL02"
-  equipmentTag: string;               // e.g. "C-101 (WASH TOWER)"
+  partNumber: string;                 // e.g. "DEMO-V001-CAN14-PL02"
+  equipmentTag: string;               // e.g. "DEMO-V-001 (WASH TOWER)"
   componentType: 'shell_can' | 'head_petal' | 'skirt_plate' | 'baffle_plate';
   canNumber?: number;                 // e.g. 14 (Can #14 of 28)
   segmentIndex: number;               // 2 of 3 plates
   totalSegmentsInCan: number;         // 3 plates per can
   
   // Material & Dimensions
-  material: string;                   // e.g. "SA516-70N (POSCO Normalized Heavy Plate)"
-  heatNumber: string;                 // e.g. "POSCO-H24-98421"
+  material: string;                   // e.g. "SA516-70N (DEMO STEEL Normalized Heavy Plate)"
+  heatNumber: string;                 // e.g. "DEMO STEEL-H24-98421"
   thicknessMm: number;                // e.g. 85.0
   unfoldedLengthMm: number;           // e.g. 11309.7
   widthMm: number;                    // e.g. 3200 (Can height)

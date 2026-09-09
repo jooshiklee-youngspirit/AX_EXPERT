@@ -18,7 +18,7 @@ export function calculateWeldingAnalysis(params: VesselPlantParams): WeldingLead
   const totalCSeamM = Math.PI * D * cSeamCount;
 
   // 2. Longitudinal Seams (L-Seams)
-  // Large diameter (e.g. 10.8m) requires 2 to 3 rolled plates per can ring
+  // Large diameter (e.g. 10.2m) requires 2 to 3 rolled plates per can ring
   const platesPerRing = D > 8 ? 3 : D > 4 ? 2 : 1;
   const canLength = L / canCount;
   const totalLSeamM = canCount * platesPerRing * canLength;
@@ -74,7 +74,7 @@ export function calculateWeldingAnalysis(params: VesselPlantParams): WeldingLead
   const standardTotalManHours = Math.round((pureArcHours / arcEfficiency) * auxFactor);
 
   // 6. Scientific Production Scheduling
-  // Wooyang HC Heavy Bay capacity: 4 parallel assembly/rolling stations, 2 shifts (16 hrs/day)
+  // W Company Heavy Bay capacity: 4 parallel assembly/rolling stations, 2 shifts (16 hrs/day)
   const activeWeldingBays = 4;
   const shiftsPerDay = 2;
   const effectiveHoursPerDay = activeWeldingBays * shiftsPerDay * 7.5; // net hours/day
@@ -156,7 +156,7 @@ export function calculateWeldingAnalysis(params: VesselPlantParams): WeldingLead
 }
 
 /**
- * Calculates scientific production cost breakdown for Wooyang HC mega plant equipment
+ * Calculates scientific production cost breakdown for W Company mega plant equipment
  */
 export function calculatePlantCost(
   params: VesselPlantParams,
@@ -187,7 +187,7 @@ export function calculatePlantCost(
   const machiningAndInternalsCostKrw = trayCost + nozzleForgingsCost;
 
   // 6. Transport SPMT & Ocean Barge Rigging
-  // Multi-axle SPMT rental (Goldhofer 48-axle lines) + jetty load-out
+  // Multi-axle SPMT rental (Generic Multi-Axle 48-axle lines) + jetty load-out
   const spmtCost = weightTon > 1500 ? 1_450_000_000 : 650_000_000;
   const transportSpmtCostKrw = spmtCost;
 
@@ -223,7 +223,7 @@ export function calculatePlantCost(
 }
 
 /**
- * Quality Inspection Matrix for Wooyang HC Heavy Pressure Equipment
+ * Quality Inspection Matrix for W Company Heavy Pressure Equipment
  */
 export function getStandardQualityMatrix(params: VesselPlantParams): QualityMatrixItem[] {
   return [
@@ -236,7 +236,7 @@ export function getStandardQualityMatrix(params: VesselPlantParams): QualityMatr
       method: 'UT 탐상기 & 휴대용 XRF 분광기',
       status: 'COMPLETED',
       defectRateTarget: '< 0.05%',
-      inspector: '김품질 차장 (WC QA)',
+      inspector: '품질책임자 (W Company QA)',
     },
     {
       id: 'QM-02',
@@ -247,18 +247,18 @@ export function getStandardQualityMatrix(params: VesselPlantParams): QualityMatr
       method: '테이퍼 게이지 & 디지털 버니어',
       status: 'COMPLETED',
       defectRateTarget: '< 0.10%',
-      inspector: '박제관 과장 (제관반장)',
+      inspector: '제관책임자 (제관반장)',
     },
     {
       id: 'QM-03',
       stage: '용접 중 관리',
       inspectionItem: '예열온도(150℃ 유지) 및 층간온도(250℃ 이하), 탠덤 SAW 전압/전류',
-      acceptanceCriteria: 'WPS-WY-SAW-01 관리 규격 범위 내',
+      acceptanceCriteria: 'WPS-DEMO-SAW-01 관리 규격 범위 내',
       frequency: '상시 실시간 모니터링',
       method: '적외선 표면온도계 & 디지털 데이터로거',
       status: 'IN_PROGRESS',
       defectRateTarget: '< 0.15%',
-      inspector: '이용접 책임 (IWE 용접기술사)',
+      inspector: '용접책임자 (IWE 용접기술사)',
     },
     {
       id: 'QM-04',
@@ -269,7 +269,7 @@ export function getStandardQualityMatrix(params: VesselPlantParams): QualityMatr
       method: 'Ir-192 감마선 RT & Olympus OmniScan PAUT',
       status: 'IN_PROGRESS',
       defectRateTarget: '< 0.25% (현재 0.16%)',
-      inspector: 'NDT 공인기관 (한국비파괴검사기술원)',
+      inspector: '가상 NDT 검사기관',
     },
     {
       id: 'QM-05',
@@ -291,7 +291,7 @@ export function getStandardQualityMatrix(params: VesselPlantParams): QualityMatr
       method: '디지털 압력 기록계 & 수압 펌프',
       status: 'SCHEDULED',
       defectRateTarget: '누설 0건',
-      inspector: '공인 검사원 (TUV / ASME AI Inspector)',
+      inspector: '공인 검사 역할 (Demo Authorized Inspector)',
     },
   ];
 }

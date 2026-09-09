@@ -14,8 +14,8 @@ export const EPC_BENCHMARKS: EpcBenchmarkComparison[] = [
     isOurTarget: false,
   },
   {
-    company: 'WC 안중 표준 (AI 감사 권고)',
-    country: 'KR (WC)',
+    company: 'W Company 가상 표준 (AI 감사 권고)',
+    country: 'KR (W Company)',
     leadTimeDays: 215,
     costBillionKrw: 132.8,
     weldingMethod: 'SAW Tandem 4극 + 턴롤 4조 동시가동',
@@ -23,7 +23,7 @@ export const EPC_BENCHMARKS: EpcBenchmarkComparison[] = [
     isOurTarget: true,
   },
   {
-    company: 'JGC Corporation (요코하마)',
+    company: 'Benchmark Fabricator A',
     country: 'JP',
     leadTimeDays: 230,
     costBillionKrw: 148.0,
@@ -31,7 +31,7 @@ export const EPC_BENCHMARKS: EpcBenchmarkComparison[] = [
     productivityIndex: 1.15,
   },
   {
-    company: 'Chiyoda Corporation',
+    company: 'Benchmark Fabricator B',
     country: 'JP',
     leadTimeDays: 245,
     costBillionKrw: 152.0,
@@ -39,7 +39,7 @@ export const EPC_BENCHMARKS: EpcBenchmarkComparison[] = [
     productivityIndex: 1.08,
   },
   {
-    company: 'Samsung E&A (엔지니어링)',
+    company: 'Benchmark Fabricator C',
     country: 'KR',
     leadTimeDays: 220,
     costBillionKrw: 138.2,
@@ -47,7 +47,7 @@ export const EPC_BENCHMARKS: EpcBenchmarkComparison[] = [
     productivityIndex: 1.22,
   },
   {
-    company: 'Saipem S.p.A.',
+    company: 'Benchmark Fabricator D',
     country: 'IT',
     leadTimeDays: 260,
     costBillionKrw: 156.4,
@@ -68,7 +68,7 @@ export function exportAuditToCSV(
   const lines: string[] = [];
 
   // Title Block
-  lines.push(`WC 중공업 플랜트사업본부 - 납기 부풀림(Slack) 감사 및 원가 거버넌스 산출서`);
+  lines.push(`W Company 중공업 플랜트사업본부 - 납기 부풀림(Slack) 감사 및 원가 거버넌스 산출서`);
   lines.push(`장비 Tag,${vessel.equipmentTag}`);
   lines.push(`프로젝트,${vessel.projectName}`);
   lines.push(`발주처,${vessel.client}`);
@@ -161,7 +161,7 @@ export function exportAuditToPrintableHtml(
 <body>
   <div class="header">
     <div>
-      <h1>WC 중공업 플랜트사업본부 • 납기 부풀림(Slack) 감사 공학 리포트</h1>
+      <h1>W Company 중공업 플랜트사업본부 • 납기 부풀림(Slack) 감사 공학 리포트</h1>
       <div class="meta">장비 Tag: <strong>${vessel.equipmentTag}</strong> | 프로젝트: <strong>${vessel.projectName}</strong> | 발주처: <strong>${vessel.client}</strong></div>
       <div class="meta">외형 규격: 전장 ${vessel.totalLengthM}m x 외경 Ø${vessel.outerDiameterM}m x 두께 ${vessel.shellThicknessMm}t | 총 중량: ${vessel.totalWeightTon.toLocaleString()}t</div>
     </div>
@@ -230,7 +230,7 @@ export function exportAuditToPrintableHtml(
       </tr>
       <tr>
         <td>SPMT 48축 운송 & 선적비</td>
-        <td>안중공장 전용부두 이송 및 바지선 유압 안착</td>
+        <td>데모 제작공장 전용부두 이송 및 바지선 유압 안착</td>
         <td class="text-right font-mono">${(cost.transportSpmtCostKrw * 1.08 / 100_000_000).toFixed(1)} 억원</td>
         <td class="text-right font-mono">${(cost.transportSpmtCostKrw / 100_000_000).toFixed(1)} 억원</td>
         <td class="text-right font-mono" style="color:#059669;">${(cost.transportSpmtCostKrw * 0.08 / 100_000_000).toFixed(1)} 억원</td>
@@ -269,7 +269,7 @@ export function exportAuditToPrintableHtml(
   </table>
 
   <div class="footer">
-    발행처: WC 플랜트 엔지니어링 거버넌스 본부 • 본 문서는 ASME Boiler and Pressure Vessel Code (BPVC) Sec.VIII Div.1 / Div.2 및 AWS D1.1 공학 표준에 의거하여 생성되었습니다.
+    발행처: W Company 플랜트 엔지니어링 거버넌스 본부 • 본 문서는 ASME Boiler and Pressure Vessel Code (BPVC) Sec.VIII Div.1 / Div.2 및 AWS D1.1 공학 표준에 의거하여 생성되었습니다.
   </div>
 </body>
 </html>

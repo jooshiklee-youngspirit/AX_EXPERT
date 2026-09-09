@@ -3,26 +3,26 @@ import { PlateSegmentData } from '../types';
 export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
   {
     id: 'plate-can14-pl02',
-    partNumber: 'C101-CAN14-PL02',
-    equipmentTag: 'C-101 (101.1m WASH TOWER)',
+    partNumber: 'DEMO-V001-CAN14-PL02',
+    equipmentTag: 'DEMO-V-001 (96.0m WASH TOWER)',
     componentType: 'shell_can',
     canNumber: 14,
     segmentIndex: 2,
     totalSegmentsInCan: 3,
 
     // Material & Dimensions
-    material: 'SA516-70N (POSCO Normalized Heavy Steel)',
-    heatNumber: 'POSCO-H24-98421-A',
+    material: 'SA516-70N (DEMO STEEL Normalized Heavy Steel)',
+    heatNumber: 'DEMO STEEL-H24-98421-A',
     thicknessMm: 85.0,
-    unfoldedLengthMm: 11309.7, // PI * 10,800mm / 3 = 11,309.7mm
+    unfoldedLengthMm: 10681.4, // PI * 10,200mm / 3 = 11,309.7mm
     widthMm: 3200.0,
     weightTon: 24.1,
 
     // Rolling & Bending Markings
-    targetRadiusMm: 5400.0,
+    targetRadiusMm: 5100.0,
     rollingDirection: 'HORIZONTAL',
     surfaceMarkingSide: 'INSIDE_SURFACE',
-    neutralAxisRadiusMm: 5357.5,
+    neutralAxisRadiusMm: 5059.0,
 
     // Welding Bevel & Seam Specs
     circumferentialWeldBevel: 'Double-V 60° (Root Face 3.0mm, Root Gap 2.5mm)',
@@ -51,7 +51,7 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
         label: 'TRAY SUPPORT RING #42 (L100x100x12)',
         xMm: 0,
         yMm: 1600,
-        widthMm: 11309.7,
+        widthMm: 10681.4,
         heightMm: 25,
         orientation: 'inside',
         weldSpec: 'Continuous Fillet 8mm (ASME Sec.IX)',
@@ -95,48 +95,48 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
 
     // QR Code Payload
     qrCodeData: {
-      qrId: 'WC-C101-CAN14-PL02',
+      qrId: 'DEMO-DEMO-V001-CAN14-PL02',
       serialNo: 'SN-2026-085-014-02',
-      drawingNo: 'DWG-C101-SH-14-REV3',
+      drawingNo: 'DWG-DEMO-V001-SH-14-REV3',
       rev: 'REV.3 (APPROVED FOR CONSTRUCTION)',
       targetElevationM: 44.8,
-      verificationUrl: 'https://wc-plant.app/verify/C101-CAN14-PL02',
+      verificationUrl: 'https://example.invalid/verify/DEMO-V001-CAN14-PL02',
     },
 
     // Dimensional Inspection Tolerances
     inspectionTolerances: {
-      unfoldedLengthNominalMm: 11309.7,
+      unfoldedLengthNominalMm: 10681.4,
       unfoldedLengthToleranceMm: 2.5,
       widthNominalMm: 3200.0,
       widthToleranceMm: 1.5,
       thicknessNominalMm: 85.0,
       thicknessToleranceMinMm: -0.25,
       thicknessToleranceMaxMm: 1.5,
-      diagonalNominalMm: 11753.8, // sqrt(11309.7^2 + 3200^2)
+      diagonalNominalMm: 11753.8, // sqrt(10681.4^2 + 3200^2)
       diagonalToleranceMm: 3.0,
       rollingOorMaxMm: 5.0, // Max Out-of-Roundness 5mm
     },
   },
   {
     id: 'plate-can08-pl01',
-    partNumber: 'C101-CAN08-PL01',
-    equipmentTag: 'C-101 (101.1m WASH TOWER)',
+    partNumber: 'DEMO-V001-CAN08-PL01',
+    equipmentTag: 'DEMO-V-001 (96.0m WASH TOWER)',
     componentType: 'shell_can',
     canNumber: 8,
     segmentIndex: 1,
     totalSegmentsInCan: 3,
 
-    material: 'SA516-70N (POSCO Normalized Heavy Steel)',
-    heatNumber: 'POSCO-H24-91204-B',
+    material: 'SA516-70N (DEMO STEEL Normalized Heavy Steel)',
+    heatNumber: 'DEMO STEEL-H24-91204-B',
     thicknessMm: 85.0,
-    unfoldedLengthMm: 11309.7,
+    unfoldedLengthMm: 10681.4,
     widthMm: 3200.0,
     weightTon: 23.4,
 
-    targetRadiusMm: 5400.0,
+    targetRadiusMm: 5100.0,
     rollingDirection: 'HORIZONTAL',
     surfaceMarkingSide: 'OUTSIDE_SURFACE',
-    neutralAxisRadiusMm: 5357.5,
+    neutralAxisRadiusMm: 5059.0,
 
     circumferentialWeldBevel: 'Double-V 60° (Root Face 3.0mm, Root Gap 2.5mm)',
     longitudinalWeldBevel: 'Double-V 60° (Tandem SAW 2-Wire Submerged Arc)',
@@ -190,16 +190,16 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
     ],
 
     qrCodeData: {
-      qrId: 'WC-C101-CAN08-PL01',
+      qrId: 'DEMO-DEMO-V001-CAN08-PL01',
       serialNo: 'SN-2026-085-008-01',
-      drawingNo: 'DWG-C101-SH-08-REV2',
+      drawingNo: 'DWG-DEMO-V001-SH-08-REV2',
       rev: 'REV.2 (APPROVED FOR CONSTRUCTION)',
       targetElevationM: 25.6,
-      verificationUrl: 'https://wc-plant.app/verify/C101-CAN08-PL01',
+      verificationUrl: 'https://example.invalid/verify/DEMO-V001-CAN08-PL01',
     },
 
     inspectionTolerances: {
-      unfoldedLengthNominalMm: 11309.7,
+      unfoldedLengthNominalMm: 10681.4,
       unfoldedLengthToleranceMm: 2.5,
       widthNominalMm: 3200.0,
       widthToleranceMm: 1.5,
@@ -213,21 +213,21 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
   },
   {
     id: 'plate-can26-pl03',
-    partNumber: 'C101-CAN26-PL03',
-    equipmentTag: 'C-101 (101.1m WASH TOWER)',
+    partNumber: 'DEMO-V001-CAN26-PL03',
+    equipmentTag: 'DEMO-V-001 (96.0m WASH TOWER)',
     componentType: 'shell_can',
     canNumber: 26,
     segmentIndex: 3,
     totalSegmentsInCan: 3,
 
-    material: 'SA516-70N (POSCO Normalized Heavy Steel)',
-    heatNumber: 'POSCO-H24-87410-C',
+    material: 'SA516-70N (DEMO STEEL Normalized Heavy Steel)',
+    heatNumber: 'DEMO STEEL-H24-87410-C',
     thicknessMm: 70.0,
-    unfoldedLengthMm: 11309.7,
+    unfoldedLengthMm: 10681.4,
     widthMm: 3200.0,
     weightTon: 19.8,
 
-    targetRadiusMm: 5400.0,
+    targetRadiusMm: 5100.0,
     rollingDirection: 'HORIZONTAL',
     surfaceMarkingSide: 'INSIDE_SURFACE',
     neutralAxisRadiusMm: 5365.0,
@@ -255,7 +255,7 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
         label: 'FRACTIONATION TRAY #78 SUPPORT RING',
         xMm: 0,
         yMm: 600,
-        widthMm: 11309.7,
+        widthMm: 10681.4,
         heightMm: 22,
         orientation: 'inside',
         weldSpec: 'Continuous Fillet 6mm',
@@ -266,7 +266,7 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
         label: 'FRACTIONATION TRAY #79 SUPPORT RING',
         xMm: 0,
         yMm: 1600,
-        widthMm: 11309.7,
+        widthMm: 10681.4,
         heightMm: 22,
         orientation: 'inside',
         weldSpec: 'Continuous Fillet 6mm',
@@ -277,7 +277,7 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
         label: 'FRACTIONATION TRAY #80 SUPPORT RING',
         xMm: 0,
         yMm: 2600,
-        widthMm: 11309.7,
+        widthMm: 10681.4,
         heightMm: 22,
         orientation: 'inside',
         weldSpec: 'Continuous Fillet 6mm',
@@ -285,16 +285,16 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
     ],
 
     qrCodeData: {
-      qrId: 'WC-C101-CAN26-PL03',
+      qrId: 'DEMO-DEMO-V001-CAN26-PL03',
       serialNo: 'SN-2026-070-026-03',
-      drawingNo: 'DWG-C101-SH-26-REV1',
+      drawingNo: 'DWG-DEMO-V001-SH-26-REV1',
       rev: 'REV.1 (APPROVED FOR CONSTRUCTION)',
       targetElevationM: 86.4,
-      verificationUrl: 'https://wc-plant.app/verify/C101-CAN26-PL03',
+      verificationUrl: 'https://example.invalid/verify/DEMO-V001-CAN26-PL03',
     },
 
     inspectionTolerances: {
-      unfoldedLengthNominalMm: 11309.7,
+      unfoldedLengthNominalMm: 10681.4,
       unfoldedLengthToleranceMm: 2.5,
       widthNominalMm: 3200.0,
       widthToleranceMm: 1.5,
@@ -308,20 +308,20 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
   },
   {
     id: 'plate-head-top-petal04',
-    partNumber: 'C101-HEAD-TOP-PETAL04',
-    equipmentTag: 'C-101 (101.1m WASH TOWER)',
+    partNumber: 'DEMO-V001-HEAD-TOP-PETAL04',
+    equipmentTag: 'DEMO-V-001 (96.0m WASH TOWER)',
     componentType: 'head_petal',
     segmentIndex: 4,
     totalSegmentsInCan: 8,
 
     material: 'SA516-70N (Hot Pressed / Normalized Dished Petal)',
-    heatNumber: 'POSCO-H24-76219-H',
+    heatNumber: 'DEMO STEEL-H24-76219-H',
     thicknessMm: 90.0,
     unfoldedLengthMm: 4241.0,
     widthMm: 2700.0,
     weightTon: 8.2,
 
-    targetRadiusMm: 5400.0,
+    targetRadiusMm: 5100.0,
     rollingDirection: 'VERTICAL',
     surfaceMarkingSide: 'OUTSIDE_SURFACE',
     neutralAxisRadiusMm: 5355.0,
@@ -368,12 +368,12 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
     ],
 
     qrCodeData: {
-      qrId: 'WC-C101-HD-PETAL-04',
+      qrId: 'DEMO-DEMO-V001-HD-PETAL-04',
       serialNo: 'SN-2026-090-HD-04',
-      drawingNo: 'DWG-C101-HD-01-REV4',
+      drawingNo: 'DWG-DEMO-V001-HD-01-REV4',
       rev: 'REV.4 (APPROVED FOR CONSTRUCTION)',
       targetElevationM: 98.2,
-      verificationUrl: 'https://wc-plant.app/verify/C101-HD-PETAL-04',
+      verificationUrl: 'https://example.invalid/verify/DEMO-V001-HD-PETAL-04',
     },
 
     inspectionTolerances: {
@@ -391,20 +391,20 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
   },
   {
     id: 'plate-skirt-pl01',
-    partNumber: 'C101-SKIRT-PL01',
-    equipmentTag: 'C-101 (101.1m WASH TOWER)',
+    partNumber: 'DEMO-V001-SKIRT-PL01',
+    equipmentTag: 'DEMO-V-001 (96.0m WASH TOWER)',
     componentType: 'skirt_plate',
     segmentIndex: 1,
     totalSegmentsInCan: 4,
 
     material: 'SA516-70N (Structural High-Load Plant Skirt)',
-    heatNumber: 'POSCO-H24-65103-S',
+    heatNumber: 'DEMO STEEL-H24-65103-S',
     thicknessMm: 60.0,
-    unfoldedLengthMm: 8482.3, // PI * 10,800mm / 4 = 8,482.3mm
+    unfoldedLengthMm: 8482.3, // PI * 10,200mm / 4 = 8,482.3mm
     widthMm: 4800.0,
     weightTon: 19.2,
 
-    targetRadiusMm: 5400.0,
+    targetRadiusMm: 5100.0,
     rollingDirection: 'HORIZONTAL',
     surfaceMarkingSide: 'OUTSIDE_SURFACE',
     neutralAxisRadiusMm: 5370.0,
@@ -483,12 +483,12 @@ export const PLATE_SEGMENT_PRESETS: PlateSegmentData[] = [
     ],
 
     qrCodeData: {
-      qrId: 'WC-C101-SKIRT-01',
+      qrId: 'DEMO-DEMO-V001-SKIRT-01',
       serialNo: 'SN-2026-060-SKT-01',
-      drawingNo: 'DWG-C101-SK-01-REV3',
+      drawingNo: 'DWG-DEMO-V001-SK-01-REV3',
       rev: 'REV.3 (APPROVED FOR CONSTRUCTION)',
       targetElevationM: 2.4,
-      verificationUrl: 'https://wc-plant.app/verify/C101-SKIRT-01',
+      verificationUrl: 'https://example.invalid/verify/DEMO-V001-SKIRT-01',
     },
 
     inspectionTolerances: {

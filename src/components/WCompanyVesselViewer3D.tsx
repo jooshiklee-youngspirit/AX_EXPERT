@@ -255,7 +255,7 @@ function createSawWeldingGantry(
   return group;
 }
 
-interface WooyangVesselViewer3DProps {
+interface WCompanyVesselViewer3DProps {
   blueprint: BlueprintModel;
   vesselParams: VesselPlantParams;
   onOpenAuditModal?: () => void;
@@ -265,7 +265,7 @@ interface WooyangVesselViewer3DProps {
   onSelectComponent?: (comp: SelectedComponentInfo | null) => void;
 }
 
-export const WooyangVesselViewer3D: React.FC<WooyangVesselViewer3DProps> = ({
+export const WCompanyVesselViewer3D: React.FC<WCompanyVesselViewer3DProps> = ({
   blueprint,
   vesselParams,
   onOpenAuditModal,
@@ -301,7 +301,7 @@ export const WooyangVesselViewer3D: React.FC<WooyangVesselViewer3DProps> = ({
   }, [orientation]);
 
   // Scaled dimensions for optimal 3D viewport (scale: 1 meter = 1 unit)
-  const length = vesselParams.totalLengthM; // e.g. 101.1
+  const length = vesselParams.totalLengthM; // e.g. 96.0
   const radius = vesselParams.outerDiameterM / 2; // e.g. 5.4
   const canCount = vesselParams.shellCanCount || 28;
 
@@ -716,7 +716,7 @@ export const WooyangVesselViewer3D: React.FC<WooyangVesselViewer3DProps> = ({
       internalsGroup.add(trayMesh);
     }
 
-    // 7. BANNER ON SHELL (Matching banner: "UNITED EO/EG III PROJECT / SAMSUNG ENGINEERING / WASH TOWER / WC")
+    // 7. BANNER ON SHELL (Matching banner: "DEMO CHEMICAL PLANT PROJECT / DEMO EPC / WASH TOWER / W Company")
     const bannerCanvas = document.createElement('canvas');
     bannerCanvas.width = 2048;
     bannerCanvas.height = 256;
@@ -742,7 +742,7 @@ export const WooyangVesselViewer3D: React.FC<WooyangVesselViewer3DProps> = ({
       ctx.font = 'bold 54px sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(
-        `${vesselParams.projectName || 'UNITED EO/EG III PROJECT'}`,
+        `${vesselParams.projectName || 'DEMO CHEMICAL PLANT PROJECT'}`,
         bannerCanvas.width / 2,
         78
       );
@@ -750,7 +750,7 @@ export const WooyangVesselViewer3D: React.FC<WooyangVesselViewer3DProps> = ({
       ctx.fillStyle = '#1d4ed8';
       ctx.font = 'bold 44px sans-serif';
       ctx.fillText(
-        `${vesselParams.client || 'SAMSUNG ENGINEERING'}`,
+        `${vesselParams.client || 'DEMO EPC'}`,
         bannerCanvas.width / 2,
         138
       );
@@ -763,11 +763,11 @@ export const WooyangVesselViewer3D: React.FC<WooyangVesselViewer3DProps> = ({
         192
       );
 
-      // WC Logo Right
+      // W Company Logo Right
       ctx.fillStyle = '#0284c7';
       ctx.font = '900 48px sans-serif';
       ctx.textAlign = 'right';
-      ctx.fillText('WC', bannerCanvas.width - 60, 145);
+      ctx.fillText('W Company', bannerCanvas.width - 60, 145);
     }
 
     const bannerTexture = new THREE.CanvasTexture(bannerCanvas);
@@ -802,7 +802,7 @@ export const WooyangVesselViewer3D: React.FC<WooyangVesselViewer3DProps> = ({
     vesselSubGroup.add(internalsGroup);
     vesselSubGroup.add(bannerMesh);
 
-    // 8. MULTI-AXLE SPMT TRANSPORTER (GOLDHOFER 48-AXLE MODULE) + CRADLE SADDLES
+    // 8. MULTI-AXLE SPMT TRANSPORTER (MULTI-AXLE DEMO MODULE) + CRADLE SADDLES
     const spmtGroup = new THREE.Group();
     const transporterLength = shellLength * 0.9;
     const axleLines = 24; // 24 dual-axle lines = 48 axles
@@ -811,7 +811,7 @@ export const WooyangVesselViewer3D: React.FC<WooyangVesselViewer3DProps> = ({
     // Two massive steel transport saddles holding the heavy tower
     const saddleGeom = new THREE.BoxGeometry(radius * 2.4, 3.2, 5.5);
     const saddleMat = new THREE.MeshStandardMaterial({
-      color: 0x991b1b, // Red Goldhofer heavy haulage saddle
+      color: 0x991b1b, // Red Generic Multi-Axle heavy haulage saddle
       metalness: 0.6,
       roughness: 0.4,
     });

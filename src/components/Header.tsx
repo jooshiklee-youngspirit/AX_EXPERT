@@ -50,11 +50,11 @@ export const Header: React.FC<HeaderProps> = ({
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-lg font-bold text-white tracking-tight">
-                WC 2D/3D 플랜트 엔지니어링 &amp; 납기·품질 관리 시스템
+                W Company 2D/3D 플랜트 엔지니어링 &amp; 납기·품질 관리 시스템
               </h1>
               <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-700/60 flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping" />
-                WC
+                W Company
               </span>
             </div>
             <p className="text-xs text-slate-400">

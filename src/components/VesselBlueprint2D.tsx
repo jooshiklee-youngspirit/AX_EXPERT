@@ -182,7 +182,7 @@ export const VesselBlueprint2D: React.FC<VesselBlueprint2DProps> = ({
           </div>
           <div className="min-w-0">
             <div className="text-xs font-bold tracking-wide flex items-center gap-1.5 truncate">
-              <span className="truncate">{equipmentTag} 도면 (WY-PV-101)</span>
+              <span className="truncate">{equipmentTag} 도면 (DEMO-PV-101)</span>
               <span className="text-[10px] px-1 py-0.2 rounded bg-emerald-950 text-emerald-300 border border-emerald-700 font-mono shrink-0">
                 U2
               </span>
@@ -570,7 +570,7 @@ export const VesselBlueprint2D: React.FC<VesselBlueprint2DProps> = ({
               fontWeight="bold"
               textAnchor="middle"
             >
-              [현수막 부착 구역: UNITED EO/EG III • WC]
+              [현수막 부착 구역: DEMO CHEMICAL PLANT • W Company]
             </text>
 
             {/* Process Nozzles & Manholes with bi-directional click and highlight */}
@@ -736,7 +736,7 @@ export const VesselBlueprint2D: React.FC<VesselBlueprint2DProps> = ({
                 fontFamily="monospace"
                 textAnchor="middle"
               >
-                전장 L = 101,100 mm (101.1 m)
+                전장 L = 101,100 mm (96.0 m)
               </text>
             </g>
 
@@ -932,7 +932,7 @@ export const VesselBlueprint2D: React.FC<VesselBlueprint2DProps> = ({
       {/* Footer Status Bar */}
       <div className="flex items-center justify-between px-4 py-1.5 border-t border-slate-700/50 bg-slate-950/60 text-[11px] text-slate-400 font-mono">
         <div className="flex items-center gap-4">
-          <span>제작처: WC 안중공장</span>
+          <span>제작처: W Company 데모 제작공장</span>
           <span>•</span>
           <span className="text-amber-400 font-semibold">
             둘레 용접: C-Seam {canCount + 2}개소 (32-Pass 탠덤 SAW)
@@ -942,7 +942,7 @@ export const VesselBlueprint2D: React.FC<VesselBlueprint2DProps> = ({
         </div>
 
         <div>
-          <span>DWG NO: WY-ENG-EOEG-C101-REV.0</span>
+          <span>DWG NO: DEMO-ENG-EOEG-DEMO-V001-REV.0</span>
         </div>
       </div>
     </div>

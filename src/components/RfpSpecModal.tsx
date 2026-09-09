@@ -106,7 +106,7 @@ export const RfpSpecModal: React.FC<RfpSpecModalProps> = ({ isOpen, onClose, rfp
           <div className="bg-slate-950/50 border border-slate-800 rounded-xl p-4 space-y-3">
             <h3 className="font-semibold text-rose-300 flex items-center gap-2 border-b border-slate-800 pb-2">
               <ShieldCheck className="w-4 h-4 text-rose-400" />
-              품질 검사 및 필수 성적서 항목 (KOMERI 입회 시험)
+              품질 검사 및 필수 성적서 항목 (Demo Client Lab 입회 시험)
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               {rfpSpec.inspectionRequirements.map((req, idx) => (
@@ -130,7 +130,7 @@ export const RfpSpecModal: React.FC<RfpSpecModalProps> = ({ isOpen, onClose, rfp
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'KOMERI_LNG_제작사양명세서.txt';
+                a.download = 'Demo Client Lab_LNG_제작사양명세서.txt';
                 a.click();
                 URL.revokeObjectURL(url);
               }}

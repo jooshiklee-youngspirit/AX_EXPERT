@@ -61,7 +61,7 @@ export const PlateMarkingModal: React.FC<PlateMarkingModalProps> = ({ isOpen, on
   const [measDiagonal, setMeasDiagonal] = useState<number>(selectedPlate.inspectionTolerances.diagonalNominalMm);
   const [measOor, setMeasOor] = useState<number>(2.2);
   const [isQrScanned, setIsQrScanned] = useState(false);
-  const [inspectorName, setInspectorName] = useState('김검사 책임연구원 (ASME Level III)');
+  const [inspectorName, setInspectorName] = useState('검사책임자 (ASME Level III)');
 
   // Regenerate NC code & QR when selected plate or format changes
   useEffect(() => {
@@ -167,14 +167,14 @@ export const PlateMarkingModal: React.FC<PlateMarkingModalProps> = ({ isOpen, on
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                  WC 대형 플랜트 부재 전개 &amp; 스마트 마킹 / NC 절단기 전송 시스템
+                  W Company 대형 플랜트 부재 전개 &amp; 스마트 마킹 / NC 절단기 전송 시스템
                 </h2>
                 <span className="text-[10px] px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-700/60 font-semibold font-mono">
                   NC CAM &amp; QR QC
                 </span>
               </div>
               <p className="text-xs text-slate-400">
-                101.1m 워시타워 캔 분할 • 용접 개선선 &amp; 조립방향 &amp; 밴딩 마킹 • NC 절단기(G-Code/ESSI) 전송 • QR 스캔 승인도면 정합성 검증
+                96.0m 워시타워 캔 분할 • 용접 개선선 &amp; 조립방향 &amp; 밴딩 마킹 • NC 절단기(G-Code/ESSI) 전송 • QR 스캔 승인도면 정합성 검증
               </p>
             </div>
           </div>
@@ -589,7 +589,7 @@ export const PlateMarkingModal: React.FC<PlateMarkingModalProps> = ({ isOpen, on
                       <rect x="6" y="6" width="55" height="55" fill="#1e293b" />
                     )}
                     <text x="65" y="18" fill="#67e8f9" fontSize="8.5" fontWeight="bold" fontFamily="monospace">
-                      WC SMART QR
+                      W Company SMART QR
                     </text>
                     <text x="65" y="30" fill="#94a3b8" fontSize="7" fontFamily="monospace">
                       {selectedPlate.partNumber}
@@ -807,17 +807,17 @@ export const PlateMarkingModal: React.FC<PlateMarkingModalProps> = ({ isOpen, on
 
                   <div className="space-y-2 text-[11px] text-slate-300">
                     <div className="p-2 rounded bg-slate-950 border border-slate-800">
-                      <strong className="text-cyan-300">Messer OmniMat / MultiTherm:</strong>
+                      <strong className="text-cyan-300">Generic gantry controller:</strong>
                       <div className="text-slate-400 mt-0.5">글로벌 후판 전용 갠트리 플라즈마 &amp; 징크 분말 마킹 지원</div>
                     </div>
 
                     <div className="p-2 rounded bg-slate-950 border border-slate-800">
-                      <strong className="text-cyan-300">ESAB Suprarex HD / Vision:</strong>
+                      <strong className="text-cyan-300">Generic Controller Profile B:</strong>
                       <div className="text-slate-400 mt-0.5">3D 베벨 헤드(Double-V 60°) 자동 틸팅 및 잉크젯 마킹 연동</div>
                     </div>
 
                     <div className="p-2 rounded bg-slate-950 border border-slate-800">
-                      <strong className="text-cyan-300">Koike PNC / Tanaka Heavy Gantry:</strong>
+                      <strong className="text-cyan-300">Generic Controller Profile C:</strong>
                       <div className="text-slate-400 mt-0.5">ISO G-Code 직접 DNC 유선 전송 및 USB 인터페이스</div>
                     </div>
                   </div>
@@ -1127,7 +1127,7 @@ export const PlateMarkingModal: React.FC<PlateMarkingModalProps> = ({ isOpen, on
                   <div>
                     <h3 className="text-sm font-bold text-white flex items-center gap-2">
                       <Compass className="w-4.5 h-4.5 text-cyan-400" />
-                      101.1m 워시 타워 내 부재 위치 &amp; 결합 구조 (3D Digital Twin Context)
+                      96.0m 워시 타워 내 부재 위치 &amp; 결합 구조 (3D Digital Twin Context)
                     </h3>
                     <p className="text-xs text-slate-400 mt-0.5">
                       선택 부재 [{selectedPlate.partNumber}]의 조립 고도 및 방위각 3D 맵핑
@@ -1141,7 +1141,7 @@ export const PlateMarkingModal: React.FC<PlateMarkingModalProps> = ({ isOpen, on
                 {/* Graphical Representation of the Tower with Highlighted Segment */}
                 <div className="relative w-full h-80 bg-slate-950 rounded-xl border border-slate-800 p-4 flex items-center justify-center overflow-hidden">
                   <svg viewBox="0 0 800 280" className="w-full h-full select-none">
-                    {/* Horizontal representation of the 101.1m tower laid flat for SPMT/shop */}
+                    {/* Horizontal representation of the 96.0m tower laid flat for SPMT/shop */}
                     <rect x="40" y="80" width="720" height="120" rx="4" fill="#0f172a" stroke="#334155" strokeWidth="1.5" />
 
                     {/* Dished heads */}
@@ -1195,7 +1195,7 @@ export const PlateMarkingModal: React.FC<PlateMarkingModalProps> = ({ isOpen, on
                     {/* Bottom Ground Reference and Dimensions */}
                     <line x1="40" y1="230" x2="760" y2="230" stroke="#475569" strokeWidth="1.5" />
                     <text x="400" y="248" fill="#94a3b8" fontSize="11" fontWeight="bold" textAnchor="middle" fontFamily="monospace">
-                      TOTAL TOWER LENGTH = 101.1 METERS (28 CANS / 84 TRAYS)
+                      TOTAL TOWER LENGTH = 96.0 METERS (28 CANS / 84 TRAYS)
                     </text>
                   </svg>
                 </div>

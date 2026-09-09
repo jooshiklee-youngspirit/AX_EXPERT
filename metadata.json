@@ -1,6 +1,6 @@
 {
   "name": "RFP to 2D/3D/BOM Studio",
-  "description": "WC 초대형 타워·반응기 2D 도면/3D 조감도 변환, SPMT 운송 시각화, 용접 엔지니어 납기 부풀림(Slack) 감사 및 ASME 생산품질 관리 시스템",
+  "description": "W Company 초대형 타워·반응기 2D 도면/3D 조감도 변환, SPMT 운송 시각화, 용접 엔지니어 납기 부풀림(Slack) 감사 및 ASME 생산품질 관리 시스템",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -91,7 +91,7 @@ export const WeldingSlackAuditModal: React.FC<WeldingSlackAuditModalProps> = ({
                 </span>
               </div>
               <p className="text-xs text-slate-400 mt-0.5">
-                {vesselParams.equipmentTag} ({vesselParams.totalLengthM}m x Ø{vesselParams.outerDiameterM}m, {vesselParams.totalWeightTon.toLocaleString()}톤) • WC 안중공장
+                {vesselParams.equipmentTag} ({vesselParams.totalLengthM}m x Ø{vesselParams.outerDiameterM}m, {vesselParams.totalWeightTon.toLocaleString()}톤) • W Company 데모 제작공장
               </p>
             </div>
           </div>
@@ -556,7 +556,7 @@ export const WeldingSlackAuditModal: React.FC<WeldingSlackAuditModalProps> = ({
                 <div className="p-3.5 rounded-xl bg-slate-800/40 border border-slate-800 flex justify-between items-center">
                   <div>
                     <div className="text-xs font-semibold text-slate-200">6. SPMT 48축 유압 운송 & 바지선 선적비</div>
-                    <div className="text-[11px] text-slate-400 mt-0.5">WC 전용 부두 이송 및 해상 고정 래싱</div>
+                    <div className="text-[11px] text-slate-400 mt-0.5">W Company 전용 부두 이송 및 해상 고정 래싱</div>
                   </div>
                   <div className="text-right">
                     <div className="text-sm font-bold font-mono text-amber-400">
@@ -700,7 +700,7 @@ export const WeldingSlackAuditModal: React.FC<WeldingSlackAuditModalProps> = ({
                       className="w-full accent-amber-500 cursor-pointer"
                     />
                     <div className="flex justify-between text-[10px] text-slate-400 font-mono">
-                      <span>0.2% (WC 역대 최고)</span>
+                      <span>0.2% (W Company 역대 최고)</span>
                       <span>1.2% (업계 평균)</span>
                       <span>4.0% (고위험 재작업)</span>
                     </div>
@@ -764,7 +764,7 @@ export const WeldingSlackAuditModal: React.FC<WeldingSlackAuditModalProps> = ({
                     글로벌 Top-tier EPC 제작사 대비 공기 & 원가 벤치마크 (Global Benchmarking)
                   </h3>
                   <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                    국내외 주요 대형 플랜트 타워 제작사(일본 JGC, 치요다, 이탈리아 사이펨, 삼성E&A)의 실적 데이터와 현장 엔지니어 요구안, WC 안중 표준을 비교 분석합니다.
+                    국내외 주요 대형 플랜트 타워 제작사(비식별 글로벌 벤치마크 제작사 A, B, C, D)의 실적 데이터와 현장 엔지니어 요구안, W Company 가상 표준을 비교 분석합니다.
                   </p>
                 </div>
               </div>
@@ -785,13 +785,13 @@ export const WeldingSlackAuditModal: React.FC<WeldingSlackAuditModalProps> = ({
                     {EPC_BENCHMARKS.map((item, idx) => {
                       const maxDays = 450;
                       const widthPct = Math.min(100, Math.round((item.leadTimeDays / maxDays) * 100));
-                      const isWC = item.isOurTarget;
+                      const isTargetCompany = item.isOurTarget;
                       const isClaimed = idx === 0;
 
                       return (
                         <div key={item.company} className="space-y-1">
                           <div className="flex justify-between text-xs">
-                            <span className={`font-medium truncate ${isWC ? 'text-cyan-300 font-bold' : isClaimed ? 'text-red-400 font-semibold' : 'text-slate-300'}`}>
+                            <span className={`font-medium truncate ${isTargetCompany ? 'text-cyan-300 font-bold' : isClaimed ? 'text-red-400 font-semibold' : 'text-slate-300'}`}>
                               {item.company} ({item.country})
                             </span>
                             <span className="font-mono font-bold text-slate-100">
@@ -801,7 +801,7 @@ export const WeldingSlackAuditModal: React.FC<WeldingSlackAuditModalProps> = ({
                           <div className="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden flex">
                             <div
                               className={`h-full rounded-full transition-all duration-500 ${
-                                isWC
+                                isTargetCompany
                                   ? 'bg-gradient-to-r from-cyan-500 to-emerald-500 shadow-md shadow-cyan-500/30'
                                   : isClaimed
                                   ? 'bg-red-500'
@@ -830,13 +830,13 @@ export const WeldingSlackAuditModal: React.FC<WeldingSlackAuditModalProps> = ({
                     {EPC_BENCHMARKS.map((item, idx) => {
                       const maxCost = 180;
                       const widthPct = Math.min(100, Math.round((item.costBillionKrw / maxCost) * 100));
-                      const isWC = item.isOurTarget;
+                      const isTargetCompany = item.isOurTarget;
                       const isClaimed = idx === 0;
 
                       return (
                         <div key={item.company} className="space-y-1">
                           <div className="flex justify-between text-xs">
-                            <span className={`font-medium truncate ${isWC ? 'text-emerald-300 font-bold' : isClaimed ? 'text-red-400 font-semibold' : 'text-slate-300'}`}>
+                            <span className={`font-medium truncate ${isTargetCompany ? 'text-emerald-300 font-bold' : isClaimed ? 'text-red-400 font-semibold' : 'text-slate-300'}`}>
                               {item.company}
                             </span>
                             <span className="font-mono font-bold text-slate-100">
@@ -846,7 +846,7 @@ export const WeldingSlackAuditModal: React.FC<WeldingSlackAuditModalProps> = ({
                           <div className="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden flex">
                             <div
                               className={`h-full rounded-full transition-all duration-500 ${
-                                isWC
+                                isTargetCompany
                                   ? 'bg-gradient-to-r from-emerald-500 to-teal-400 shadow-md shadow-emerald-500/30'
                                   : isClaimed
                                   ? 'bg-red-500'

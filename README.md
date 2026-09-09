@@ -136,7 +136,7 @@ npm run build
 
 ### 프로젝트 배경
 
-이 데모는 W Company D+AX 전환전략을 수립한 7조 제안의 실행 가능성을 점검하기 위해 제작했습니다. 김영규 위원의 바이브 코딩 특강은 비개발자가 아이디어를 하루도 채 걸리지 않아 작동하는 프로토타입으로 구현하는 데 중요한 출발점이 되었습니다.
+이 데모는 W Company D+AX 전환전략을 수립한 프로젝트팀 제안의 실행 가능성을 점검하기 위해 제작했습니다. 전문가의 바이브 코딩 특강은 비개발자가 아이디어를 하루도 채 걸리지 않아 작동하는 프로토타입으로 구현하는 데 중요한 출발점이 되었습니다.
 
 W Company가 90일 실증을 통해 기능별 효과와 현장 수용성을 검증하고, 통과한 기능부터 단계적으로 확대하기를 기대합니다.
 
@@ -274,7 +274,7 @@ Do not commit real RFPs, customer drawings, contract prices, cost data, personal
 
 ### Background
 
-This demo was created to test the practical implementation of the recommendations developed by Team 7 for the D+AX transformation strategy of W Company. Commissioner Young-gyu Kim's vibe-coding lecture helped provide the confidence to turn the concept into a working prototype in less than one day.
+This demo was created to test the practical implementation of the recommendations developed by project team for the D+AX transformation strategy of W Company. A professional vibe-coding workshop helped provide the confidence to turn the concept into a working prototype in less than one day.
 
 The intended next step is a controlled 90-day pilot in which W Company validates business value and shop-floor adoption by function, then scales only the functions that pass the agreed criteria.
 

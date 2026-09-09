@@ -1,19 +1,19 @@
 import { BlueprintModel, BomItem, RfpSpecification, VesselPlantParams } from '../types';
 
 export const DEFAULT_RFP_SPEC: RfpSpecification = {
-  title: 'UNITED EO/EG III PROJECT - 초대형 워시 타워(Wash Tower) 제작 및 납기·품질 관리',
-  client: '삼성엔지니어링(Samsung Engineering) / 사빅(SABIC) 발주',
-  projectCode: 'SAMSUNG-ENG-EOEG-III-C101',
-  budget: '총 ₩18,500,000,000원 (185억원 수준)',
-  deliveryPeriod: '표준 공기 215일 이내 (엔지니어 과다 요구 420일 대비 205일 단축 목표)',
-  designPressure: '2.4 MPa (수압시험 3.6 MPa)',
+  title: 'DEMO CHEMICAL PLANT PROJECT - 초대형 워시 타워(Wash Tower) 제작 및 납기·품질 관리',
+  client: '가상 EPC사 / 가상 발주사',
+  projectCode: 'DEMO-EPC-PLANT-001',
+  budget: '가상 예산 ₩16,500,000,000원',
+  deliveryPeriod: '가상 기준공기 210일 이내 (가상 제출공기 390일 대비 검토)',
+  designPressure: '2.2 MPa (수압시험 3.3 MPa)',
   designTemp: '-45 ℃ ~ +180 ℃ (극저온-고온 복합 사이클)',
   applicableStandards: [
     'ASME Boiler and Pressure Vessel Code Sec.VIII Div.1 / Div.2 (U / U2 Stamp)',
     'ASME Sec.IX (Welding and Brazing Qualifications - SAW/FCAW/GTAW)',
     'ASME B16.47 Series B (대구경 대형 플랜지 규격)',
-    'API 650 / WC Heavy Pressure Equipment Standard',
-    'SAMSUNG ENGINEERING Technical Specifications (GS-PV-001)'
+    'API 650 / W Company Heavy Pressure Equipment Standard',
+    'DEMO EPC Technical Specifications (GS-PV-001)'
   ],
   inspectionRequirements: [
     '방사선 투과 시험 (RT) 100% 전수 검사 (둘레 C-Seam 및 길이 L-Seam 이음부)',
@@ -28,49 +28,49 @@ export const DEFAULT_RFP_SPEC: RfpSpecification = {
 
 export const PRESET_BLUEPRINTS: BlueprintModel[] = [
   {
-    id: 'wc-wash-tower-101m',
-    name: 'WC 101.1m 초대형 워시 타워 (UNITED EO/EG III PROJECT)',
-    category: '초대형 타워 / 컬럼 (WC)',
-    description: '삼성엔지니어링 / 사빅 납품 실적의 전장 101.1m, 외경 10.8m, 총중량 1,926톤 초대형 세척탑. 85mm 중후판 28캔 롤링, 2:1 타원형 경판, 트레이 84단, 노즐 42개소.',
+    id: 'demo-wash-tower-101m',
+    name: 'W Company 96.0m 초대형 워시 타워 (DEMO CHEMICAL PLANT PROJECT)',
+    category: '초대형 타워 / 컬럼 (W Company)',
+    description: '가상 프로젝트를 위한 전장 96.0m, 외경 10.2m, 총중량 1,680톤 초대형 세척탑. 82mm 중후판 30캔 롤링, 2:1 타원형 경판, 트레이 84단, 노즐 42개소.',
     params: {
-      outerDiameter: 10800,
+      outerDiameter: 10200,
       pitchCircleDiameter: 10400,
       boltHoleCount: 96,
       boltHoleDiameter: 48,
       bossDiameter: 3200,
       innerDiameter: 2400,
-      totalHeight: 101100,
+      totalHeight: 96000,
       flangeThickness: 120,
       raisedFaceDiameter: 4200,
       raisedFaceHeight: 10
     },
     vesselParams: {
       equipmentType: 'wash_tower',
-      equipmentTag: 'C-101 (WASH TOWER)',
-      projectName: 'UNITED EO/EG III PROJECT',
-      client: 'SAMSUNG ENGINEERING / SABIC',
-      fabricator: 'WC',
-      totalLengthM: 101.1,
+      equipmentTag: 'DEMO-V-001 (WASH TOWER)',
+      projectName: 'DEMO CHEMICAL PLANT PROJECT',
+      client: 'DEMO EPC / DEMO CLIENT',
+      fabricator: 'W Company',
+      totalLengthM: 96.0,
       outerDiameterM: 10.8,
       totalHeightM: 11.4,
-      totalWeightTon: 1926,
-      shellThicknessMm: 85,
-      headThicknessMm: 95,
-      shellCanCount: 28,
+      totalWeightTon: 1680,
+      shellThicknessMm: 82,
+      headThicknessMm: 92,
+      shellCanCount: 30,
       headType: 'ellipsoidal_2_1',
-      trayCount: 84,
-      nozzleCount: 42,
-      manholeCount: 14,
+      trayCount: 72,
+      nozzleCount: 36,
+      manholeCount: 12,
       skirtHeightM: 7.5,
       skirtThicknessMm: 55,
-      designPressureMpa: 2.4,
+      designPressureMpa: 2.2,
       designTempC: 180,
-      hydroTestPressureMpa: 3.6,
+      hydroTestPressureMpa: 3.3,
       corrosionAllowanceMm: 3.0,
       weldGrooveType: 'Double-U',
       weldingProcessMain: 'SAW (Tandem)',
-      engineerSubmittedDays: 420,
-      engineerSubmittedCostEok: 185
+      engineerSubmittedDays: 390,
+      engineerSubmittedCostEok: 165
     },
     material: 'sa516_70n',
     surfaceFinish: 'SSPC-SP10 Blast / Heavy-duty High Epoxy 300μm',
@@ -80,10 +80,10 @@ export const PRESET_BLUEPRINTS: BlueprintModel[] = [
     rfpBudget: DEFAULT_RFP_SPEC.budget
   },
   {
-    id: 'wc-eoeg-column-55m',
-    name: 'WC 55m 에틸렌 글리콜 분리탑 (EO/EG Distillation Column)',
+    id: 'demo-eoeg-column-55m',
+    name: 'W Company 55m 에틸렌 글리콜 분리탑 (Demo Distillation Column)',
     category: '정밀 증류 컬럼',
-    description: 'WC 대표 화공 분리 설비. 전장 55.0m, 직경 6.8m, 중량 780톤, 쉘 두께 65mm, 트레이 54단.',
+    description: 'W Company 대표 화공 분리 설비. 전장 55.0m, 직경 6.8m, 중량 780톤, 쉘 두께 65mm, 트레이 54단.',
     params: {
       outerDiameter: 6800,
       pitchCircleDiameter: 6500,
@@ -98,10 +98,10 @@ export const PRESET_BLUEPRINTS: BlueprintModel[] = [
     },
     vesselParams: {
       equipmentType: 'distillation_column',
-      equipmentTag: 'C-204 (EO/EG COLUMN)',
-      projectName: 'GLOBAL CHEMICAL REFINERY PLANT',
-      client: 'SK에코플랜트 / ARAMCO',
-      fabricator: 'WC',
+      equipmentTag: 'DEMO-COL-002 (DEMO COLUMN)',
+      projectName: 'DEMO REFINERY PROJECT B',
+      client: 'DEMO EPC B / DEMO CLIENT B',
+      fabricator: 'W Company',
       totalLengthM: 55.0,
       outerDiameterM: 6.8,
       totalHeightM: 7.4,
@@ -129,8 +129,8 @@ export const PRESET_BLUEPRINTS: BlueprintModel[] = [
     standard: 'ASME Sec.VIII Div.1 / KS B 6750'
   },
   {
-    id: 'wc-loop-reactor-38m',
-    name: 'WC 고압 중후판 화학 반응기 (Heavy Loop Reactor)',
+    id: 'demo-loop-reactor-38m',
+    name: 'W Company 고압 중후판 화학 반응기 (Heavy Loop Reactor)',
     category: '고압 화학 반응기',
     description: '셰일가스 및 폴리머 합성용 특수 초고압 반응기. 전장 38.5m, 직경 4.6m, 중량 920톤, 쉘 두께 135mm 초중후판 단조재 접합.',
     params: {
@@ -147,10 +147,10 @@ export const PRESET_BLUEPRINTS: BlueprintModel[] = [
     },
     vesselParams: {
       equipmentType: 'loop_reactor',
-      equipmentTag: 'R-301 (LOOP REACTOR)',
-      projectName: 'US GULF COAST SHALE GAS EXPANSION',
-      client: 'CHEVRON PHILLIPS / HYUNDAI E&C',
-      fabricator: 'WC',
+      equipmentTag: 'DEMO-RX-003 (LOOP REACTOR)',
+      projectName: 'DEMO REACTOR PROJECT C',
+      client: 'DEMO EPC C / DEMO CLIENT C',
+      fabricator: 'W Company',
       totalLengthM: 38.5,
       outerDiameterM: 4.6,
       totalHeightM: 5.2,
@@ -178,8 +178,8 @@ export const PRESET_BLUEPRINTS: BlueprintModel[] = [
     standard: 'ASME Sec.VIII Div.2 Class 2 (Heavy Wall Reactor)'
   },
   {
-    id: 'wc-heat-exchanger-18m',
-    name: 'WC TEMA R 대형 쉘앤튜브 열교환기 (Heat Exchanger)',
+    id: 'demo-heat-exchanger-18m',
+    name: 'W Company TEMA R 대형 쉘앤튜브 열교환기 (Heat Exchanger)',
     category: '대형 열교환기',
     description: 'API 660 규격 정유 플랜트용 대형 고압 열교환기. 전장 16.5m, 직경 2.8m, 중량 240톤, 튜브 2,800본, 튜브시트 중후판.',
     params: {
@@ -196,10 +196,10 @@ export const PRESET_BLUEPRINTS: BlueprintModel[] = [
     },
     vesselParams: {
       equipmentType: 'heat_exchanger',
-      equipmentTag: 'E-401 (HEAVY REBOILER EXCHANGER)',
-      projectName: 'MIDDLE EAST REFINERY RETROFIT',
-      client: 'ADNOC / GS 건설',
-      fabricator: 'WC',
+      equipmentTag: 'DEMO-HX-004 (HEAVY REBOILER EXCHANGER)',
+      projectName: 'DEMO HEAT EXCHANGER PROJECT D',
+      client: 'DEMO EPC D / DEMO CLIENT D',
+      fabricator: 'W Company',
       totalLengthM: 16.5,
       outerDiameterM: 2.8,
       totalHeightM: 3.4,
@@ -228,7 +228,7 @@ export const PRESET_BLUEPRINTS: BlueprintModel[] = [
   },
   {
     id: 'flange-190',
-    name: 'Weld Neck 노즐 플랜지 (KS 10K 100A / KOMERI Nozzle)',
+    name: 'Weld Neck 노즐 플랜지 (KS 10K 100A / Demo Client Lab Nozzle)',
     category: '배관 및 노즐 단품',
     description: '타워 및 저장탱크 상부 인렛 노즐 플랜지. OD Ø190, PCD Ø160, 8-Ø12 볼트홀, 전체 높이 74mm',
     params: {
@@ -250,7 +250,7 @@ export const PRESET_BLUEPRINTS: BlueprintModel[] = [
 ];
 
 export function calculateBOM(blueprint: BlueprintModel): BomItem[] {
-  // If this is a Wooyang HC Mega Vessel
+  // If this is a W Company Mega Vessel
   if (blueprint.vesselParams) {
     const vp = blueprint.vesselParams;
     const steelPriceTon = vp.equipmentType === 'loop_reactor' ? 3_800_000 : 2_250_000;
@@ -259,7 +259,7 @@ export function calculateBOM(blueprint: BlueprintModel): BomItem[] {
     return [
       {
         id: 'bom-vessel-1',
-        partNo: 'WY-SHELL-PL-01',
+        partNo: 'DEMO-SHELL-PL-01',
         name: `${vp.equipmentTag} 쉘 및 2:1 타원형 경판 중후판 강재`,
         standard: 'ASME SA-516 Gr.70N / SA-240 316L Clad',
         spec: `두께 ${vp.shellThicknessMm}t ~ ${vp.headThicknessMm}t x 캔 ${vp.shellCanCount}개 롤벤딩재`,
@@ -273,7 +273,7 @@ export function calculateBOM(blueprint: BlueprintModel): BomItem[] {
       },
       {
         id: 'bom-vessel-2',
-        partNo: 'WY-WELD-CONSUM-01',
+        partNo: 'DEMO-WELD-CONSUM-01',
         name: '용접봉, 탠덤 SAW 와이어 & 플럭스 (Lincoln/KOBELCO)',
         standard: 'AWS A5.17 / ASME SFA-5.17 F7A4-EH14',
         spec: `와이어 Ø4.0mm + 중성 소결 플럭스 (예상 용착량 비례)`,
@@ -287,7 +287,7 @@ export function calculateBOM(blueprint: BlueprintModel): BomItem[] {
       },
       {
         id: 'bom-vessel-3',
-        partNo: 'WY-LABOR-WELD-01',
+        partNo: 'DEMO-LABOR-WELD-01',
         name: 'ASME Sec.IX 공인 용접사 및 제관 조립 표준 공수 (M/H)',
         standard: 'ASME Sec.IX WPS/PQR 등록 공법',
         spec: `4개 베이 탠덤 SAW 회전 턴롤(Turn-roll) 연속 자동 용접`,
@@ -301,9 +301,9 @@ export function calculateBOM(blueprint: BlueprintModel): BomItem[] {
       },
       {
         id: 'bom-vessel-4',
-        partNo: 'WY-INTERNALS-01',
+        partNo: 'DEMO-INTERNALS-01',
         name: `내부 부속물 (트레이 ${vp.trayCount}단 서포트 링 및 다운코머)`,
-        standard: 'SAMSUNG ENG GS-PV-001',
+        standard: 'DEMO EPC GS-PV-001',
         spec: `외경 Ø${vp.outerDiameterM}m 316L 앵글 링 84개소 및 패킹 클램프`,
         material: 'SUS316L',
         quantity: vp.trayCount || 1,
@@ -315,7 +315,7 @@ export function calculateBOM(blueprint: BlueprintModel): BomItem[] {
       },
       {
         id: 'bom-vessel-5',
-        partNo: 'WY-NDT-PWHT-01',
+        partNo: 'DEMO-NDT-PWHT-01',
         name: '100% 방사선 투과(RT), PAUT 및 대형 노 내 소둔 열처리(PWHT)',
         standard: 'ASME Sec.VIII UCS-56 / ASME Sec.V',
         spec: `620℃ 균열 소둔 열처리 + 둘레/길이 심 전수 NDT 공인 검사`,
@@ -329,9 +329,9 @@ export function calculateBOM(blueprint: BlueprintModel): BomItem[] {
       },
       {
         id: 'bom-vessel-6',
-        partNo: 'WY-SPMT-LOGISTICS-01',
-        name: '골드호퍼 48축 유압식 SPMT 육상 운송 및 항만 바지선 선적',
-        standard: 'WC 안중공장 전용 운송 프로토콜',
+        partNo: 'DEMO-SPMT-LOGISTICS-01',
+        name: '다축형 48축 유압식 SPMT 육상 운송 및 항만 바지선 선적',
+        standard: 'W Company 데모 제작공장 전용 운송 프로토콜',
         spec: `${vp.totalWeightTon}톤급 모듈 트랜스포터 유압 밸런싱 및 바지선 바인딩`,
         material: 'Special Heavy Logistics',
         quantity: 1,
@@ -339,7 +339,7 @@ export function calculateBOM(blueprint: BlueprintModel): BomItem[] {
         totalWeightKg: 0,
         unitPriceKrw: vp.totalWeightTon > 1500 ? 1450000000 : 650000000,
         totalPriceKrw: vp.totalWeightTon > 1500 ? 1450000000 : 650000000,
-        process: '평택항 안중공장 전용 부두 직선 이동 및 해상 선적 고정(Lashing)'
+        process: '가상 항만 데모 제작공장 전용 부두 직선 이동 및 해상 선적 고정(Lashing)'
       }
     ];
   }

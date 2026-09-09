@@ -154,7 +154,7 @@ export function generateArbitraryBlueprint(customSeed?: number): BlueprintModel 
     surfaceFinish: arch.finish,
     standard: arch.standard,
     rfpTitle: '임의 2D 도면 생성 및 3D 파라메트릭 변환 테스트',
-    rfpClient: '(재)한국조선해양기자재연구원 (KOMERI) 가스연료기술센터',
+    rfpClient: '(재)가상 산업기술연구원 (Demo Client Lab) 가스연료기술센터',
     rfpBudget: '자율 테스트 도면',
   };
 }

@@ -34,7 +34,7 @@ export const ImportModal: React.FC<ImportModalProps> = ({
     mode === 'rfp' ? 'text' : 'preset'
   );
   const [rfpText, setRfpText] = useState(
-    `[과업요구서] 한국조선해양기자재연구원(KOMERI) LNG 레벨테스트 저장탱크 제작\n1. 상부 액체 주입구 노즐 플랜지: 외경 Ø190mm, PCD Ø160mm, 볼트홀 8개(Ø12mm), 내경 Ø38mm, 보스 외경 Ø60mm, 전고 74mm, 플랜지 두께 24mm.\n2. 재질: SUS316L 극저온 내식 단조재 (ASTM A182 F316L).\n3. 설계압력 1.6 MPa, 설계온도 -163℃.`
+    `[과업요구서] 가상 산업기술연구원(Demo Client Lab) LNG 레벨테스트 저장탱크 제작\n1. 상부 액체 주입구 노즐 플랜지: 외경 Ø190mm, PCD Ø160mm, 볼트홀 8개(Ø12mm), 내경 Ø38mm, 보스 외경 Ø60mm, 전고 74mm, 플랜지 두께 24mm.\n2. 재질: SUS316L 극저온 내식 단조재 (ASTM A182 F316L).\n3. 설계압력 1.6 MPa, 설계온도 -163℃.`
   );
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
@@ -66,7 +66,7 @@ export const ImportModal: React.FC<ImportModalProps> = ({
         raisedFaceDiameter: 130,
         raisedFaceHeight: 2,
       };
-      onCustomParams(extractedParams, 'AI 분석 도면: KOMERI LNG 노즐 플랜지 (Ø190)');
+      onCustomParams(extractedParams, 'AI 분석 도면: Demo Client Lab LNG 노즐 플랜지 (Ø190)');
       onClose();
     }, 1200);
   };

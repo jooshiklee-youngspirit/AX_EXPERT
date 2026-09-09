@@ -16,7 +16,7 @@ import {
   Compass,
 } from 'lucide-react';
 import { exportMeshToSTL, exportMeshToOBJ } from '../utils/stlExporter';
-import { WooyangVesselViewer3D } from './WooyangVesselViewer3D';
+import { WCompanyVesselViewer3D } from './WCompanyVesselViewer3D';
 import { SelectedComponentInfo } from '../types';
 
 interface CadViewer3DProps {
@@ -36,10 +36,10 @@ export const CadViewer3D: React.FC<CadViewer3DProps> = ({
   selectedComponent,
   onSelectComponent,
 }) => {
-  // If this blueprint is a heavy plant equipment (WC mega-vessel), render WooyangVesselViewer3D
+  // If this blueprint is a heavy plant equipment (W Company mega-vessel), render WCompanyVesselViewer3D
   if (blueprint.vesselParams) {
     return (
-      <WooyangVesselViewer3D
+      <WCompanyVesselViewer3D
         blueprint={blueprint}
         vesselParams={blueprint.vesselParams}
         onOpenAuditModal={onOpenAuditModal}

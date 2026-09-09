@@ -31,7 +31,7 @@ export const Blueprint2D: React.FC<Blueprint2DProps> = ({
   selectedComponent,
   onSelectComponent,
 }) => {
-  // If this blueprint is a heavy plant equipment (WC mega-vessel), render VesselBlueprint2D
+  // If this blueprint is a heavy plant equipment (W Company mega-vessel), render VesselBlueprint2D
   if (blueprint.vesselParams) {
     return (
       <VesselBlueprint2D
